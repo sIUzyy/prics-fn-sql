@@ -9,6 +9,9 @@ import EditPriorityModal from "../modal/edit-priority-modal";
 // ---- utils ----
 import { DELIVERY_STATUS_COLOR } from "@/utils/Color";
 
+// ---- library ----
+import { Pencil } from "lucide-react";
+
 export default function AdminPriorityPerPlateNoTable({ data }) {
   // ---- modal state check if its open
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -98,12 +101,13 @@ export default function AdminPriorityPerPlateNoTable({ data }) {
 
                           <td className="td-admin-table ">
                             <button
+                              title={`Edit priority order for ${shipment.tracking_no}`}
                               onClick={() =>
                                 handleEditModal(shipment.tracking_no)
                               }
                               className="text-green-600 cursor-pointer outline-none"
                             >
-                              Edit
+                              <Pencil size={15} />
                             </button>
                           </td>
                         </tr>

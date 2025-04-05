@@ -128,6 +128,8 @@ export default function AdminSummaryTable({ data, preDeliveryData, products }) {
       : "bg-gray-400 text-white px-5 py-1 rounded-full capitalize";
   };
 
+  console.log(paginatedData);
+
   return (
     <>
       {/* delete modal */}

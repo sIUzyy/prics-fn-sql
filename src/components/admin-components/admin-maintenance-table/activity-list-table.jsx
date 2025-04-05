@@ -11,7 +11,7 @@ import DeleteActivityModal from "@/components/modal/delete-activity"; // ---- mo
 import SearchBar from "@/components/search/search-bar"; // ---- search bar
 
 // ---- library ----
-import { Plus } from "lucide-react"; // ---- icons
+import { Plus, Pencil, Trash } from "lucide-react"; // ---- icons
 import { useDebounce } from "react-use"; // ---- npm install react-use. this is a hook that helps us to debounce the search input.
 
 export default function ActivityListTable({ data }) {
@@ -152,6 +152,15 @@ export default function ActivityListTable({ data }) {
 
                           <td className="td-user-table flex gap-x-5    ">
                             <button
+                              title="Edit Activity"
+                              onClick={() => handleEditModal(item.activity_id)}
+                              className="text-green-600 cursor-pointer outline-none"
+                            >
+                              <Pencil size={15} />
+                            </button>
+
+                            <button
+                              title="Delete Activity"
                               onClick={() =>
                                 handleDeleteModal(
                                   item.activity_id,
@@ -160,14 +169,7 @@ export default function ActivityListTable({ data }) {
                               }
                               className="text-red-600 cursor-pointer outline-none"
                             >
-                              Delete
-                            </button>
-
-                            <button
-                              onClick={() => handleEditModal(item.activity_id)}
-                              className="text-green-600 cursor-pointer outline-none"
-                            >
-                              Edit
+                              <Trash size={15} />
                             </button>
                           </td>
                         </tr>

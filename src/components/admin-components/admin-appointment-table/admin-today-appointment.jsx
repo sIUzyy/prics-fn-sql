@@ -11,7 +11,7 @@ import AppointmentReport from "@/report/appointment-report";
 import SearchBar from "@/components/search/search-bar";
 
 // ---- icons ----
-import { IdCard, FileChartColumnIncreasing } from "lucide-react";
+import { IdCard, FileChartColumnIncreasing, Pencil, Trash } from "lucide-react";
 
 // ---- react-router ----
 import { Link } from "react-router";
@@ -303,7 +303,7 @@ export default function TodayAppointment() {
                                   generateGatePass(item.appointment_id)
                                 }
                                 className="cursor-pointer outline-none"
-                                title={`Download appointment id ${item.appointment_id}`}
+                                title={`Download gate pass id ${item.appointment_id}`}
                               >
                                 <IdCard
                                   size={20}
@@ -313,6 +313,7 @@ export default function TodayAppointment() {
                             </td>
                             <td className="td-admin-table">
                               <PDFDownloadLink
+                                title={`Download appt report id ${item.appointment_id}`}
                                 document={
                                   <AppointmentReport
                                     data={appointmentData.filter(
@@ -338,7 +339,7 @@ export default function TodayAppointment() {
                                   handleEditModal(item.appointment_id)
                                 }
                               >
-                                Edit
+                                <Pencil size={15} />
                               </button>
                               <button
                                 title={`Delete appt. id ${item.appointment_id}`}
@@ -352,7 +353,7 @@ export default function TodayAppointment() {
                                 }
                                 disabled={item.status === "Completed"}
                               >
-                                Delete
+                                <Trash size={15} />
                               </button>
                             </td>
                           </tr>

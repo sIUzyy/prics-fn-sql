@@ -52,8 +52,8 @@ export const ADMIN_APPOINTMENT_TABLE_HEADERS = [
   "Time In",
   "Time Out",
   "Status",
-  "Gate Pass",
-  "Report",
+  // "Gate Pass",
+  // "Report",
   "Action",
 ];
 

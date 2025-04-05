@@ -10,7 +10,7 @@ import UserListModal from "@/components/modal/user-list-modal"; // ---- modal
 import SearchBar from "@/components/search/search-bar"; // ---- search bar
 
 // ---- library ----
-import { UserPlus } from "lucide-react"; // ---- icons
+import { UserPlus, Trash } from "lucide-react"; // ---- icons
 import { useDebounce } from "react-use"; // ---- npm install react-use. this is a hook that helps us to debounce the search input.
 
 // display on AdminOrderSummary page
@@ -127,12 +127,13 @@ export default function UserListTable({ data }) {
 
                           <td className="td-user-table flex   ">
                             <button
+                              title="Delete User Account"
                               onClick={() =>
                                 handleDeleteModal(item.username, item.username)
                               }
                               className="text-red-600 cursor-pointer outline-none"
                             >
-                              Delete
+                              <Trash size={15} />
                             </button>
                           </td>
                         </tr>

@@ -20,7 +20,13 @@ import { toast } from "sonner"; // ---- toast
 import { Buffer } from "buffer"; // ---- buffer
 import { useDebounce } from "react-use"; // ---- useDebounce
 import { PDFDownloadLink } from "@react-pdf/renderer"; // ---- react-pdf
-import { IdCard, FileChartColumnIncreasing, CalendarPlus } from "lucide-react"; // ---- icons
+import {
+  IdCard,
+  FileChartColumnIncreasing,
+  CalendarPlus,
+  Pencil,
+  Trash,
+} from "lucide-react"; // ---- icons
 
 // ---- utils ----
 import { DELIVERY_STATUS_COLOR } from "@/utils/Color";
@@ -337,7 +343,7 @@ export default function AllAppointment() {
                                   generateGatePass(item.appointment_id)
                                 }
                                 className="cursor-pointer outline-none"
-                                title={`Download appointment id ${item.appointment_id}`}
+                                title={`Download gate pass id ${item.appointment_id}`}
                               >
                                 <IdCard
                                   size={20}
@@ -345,11 +351,9 @@ export default function AllAppointment() {
                                 />
                               </button>
                             </td>
-                            <td
-                              className="td-admin-table"
-                              title={`Download report for ${item.appointment_id}`}
-                            >
+                            <td className="td-admin-table">
                               <PDFDownloadLink
+                                title={`Download appt report id ${item.appointment_id}`}
                                 document={
                                   <AppointmentReport
                                     data={appointmentData.filter(
@@ -375,7 +379,7 @@ export default function AllAppointment() {
                                   handleEditModal(item.appointment_id)
                                 }
                               >
-                                Edit
+                                <Pencil size={15} />
                               </button>
                               <button
                                 title={`Delete appt. id ${item.appointment_id}`}
@@ -389,7 +393,7 @@ export default function AllAppointment() {
                                 }
                                 disabled={item.status === "Completed"}
                               >
-                                Delete
+                                <Trash size={15} />
                               </button>
                             </td>
                           </tr>
