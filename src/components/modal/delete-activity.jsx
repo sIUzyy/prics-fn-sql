@@ -30,6 +30,9 @@ export default function DeleteActivityModal({
   // ---- loading state
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(selectedActivitiyId);
+  console.log(selectedActivityName);
+
   // ---- function to delete the user account (guard)
   const handleDelete = async () => {
     setIsLoading(true);

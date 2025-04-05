@@ -13,6 +13,7 @@ const clients = [
   { name: "JS Unitrade Merchandise Inc" },
   { name: "Magsaysay Shipping & Logistics" },
   { name: "OneStop Warehousing Solutions" },
+  { name: "Cold Link Asia Logistics Corporation" },
 ];
 
 export default function ClientPageComponent({ clientRef }) {
