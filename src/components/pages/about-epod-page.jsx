@@ -41,7 +41,7 @@ export default function AboutEpodPageComponent({ epodRef }) {
             Electronic Proof of Delivery
           </h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-            Everything you need to know about ePOD
+            Everything you need to know about PRICS ePOD
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

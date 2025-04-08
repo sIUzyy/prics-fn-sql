@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
   label: { fontSize: 10, marginVertical: 5, fontWeight: "bold" },
 });
 
+// ---- API ENDPOINT ----
+const API_ENDPOINT = import.meta.env.VITE_BACKEND_API_ENDPOINT_SQL;
+
 // ---- report by product code (attached file (image))
 export default function AttachedFile({ selectedProductCode, preDeliveryData }) {
   // Extract unique images from matching products
@@ -79,7 +82,7 @@ export default function AttachedFile({ selectedProductCode, preDeliveryData }) {
             {uniqueImages.map((image, index) => (
               <Image
                 key={index}
-                src={`http://localhost:8000/${image}`}
+                src={`${API_ENDPOINT}/${image}`}
                 // src={`https://prics-epod-backend.onrender.com/${image}`}
                 style={{
                   width: 400,
