@@ -43,12 +43,12 @@ export default function ScannedTimeIn() {
 
     try {
       // ---- forces back camera
-      // const constraints = {
-      //   video: { facingMode: { exact: "environment" } },
-      // };
+      const constraints = {
+        video: { facingMode: { exact: "environment" } },
+      };
 
-      // await navigator.mediaDevices.getUserMedia(constraints);
-      await navigator.mediaDevices.getUserMedia({ video: true });
+      await navigator.mediaDevices.getUserMedia(constraints);
+      // await navigator.mediaDevices.getUserMedia({ video: true });
 
       const codeReader = new BrowserMultiFormatReader();
 
@@ -112,10 +112,10 @@ export default function ScannedTimeIn() {
         console.log(response.data.appointment);
         setAppointmentData([response.data.appointment]);
 
-        // ** Refresh the page after 10 seconds **
+        // ** Refresh the page after 20 seconds **
         setTimeout(() => {
           window.location.reload();
-        }, 5000);
+        }, 20000);
       }
     } catch (err) {
       if (err.response?.status === 400) {

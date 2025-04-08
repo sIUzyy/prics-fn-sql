@@ -35,12 +35,12 @@ export default function ScanItems() {
     setError("");
 
     try {
-      // const constraints = {
-      //   video: { facingMode: { exact: "environment" } }, // Forces back camera
-      // };
+      const constraints = {
+        video: { facingMode: { exact: "environment" } }, // Forces back camera
+      };
 
-      // await navigator.mediaDevices.getUserMedia(constraints);
-      await navigator.mediaDevices.getUserMedia({ video: true });
+      await navigator.mediaDevices.getUserMedia(constraints);
+      // await navigator.mediaDevices.getUserMedia({ video: true });
 
       const codeReader = new BrowserMultiFormatReader();
 
