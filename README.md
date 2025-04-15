@@ -1,3 +1,5 @@
+![prics-epod](https://github.com/user-attachments/assets/86fcba4a-cc82-445e-ada6-a3d8bc215235)
+
 # Electronic Proof of Delivery (ePOD)
 
 Electronic Proof of Delivery (ePOD) is built with React.js, Tailwind CSS, and ShadCN. This system helps streamline the delivery process and allows users to easily set up appointments.
