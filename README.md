@@ -28,7 +28,7 @@ Electronic Proof of Delivery (ePOD) is built with React.js, Tailwind CSS, and Sh
 
 **Server:** Express JS
 
-**Database:** MongoDB
+**Database:** MS SQL Server
 
 ## Installation
 
