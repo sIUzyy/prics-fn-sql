@@ -45,8 +45,8 @@ note: When you download Node.js, npm will be installed automatically.
 After installing all the required dependencies, you can proceed with the procedure below.
 
 ```bash
-  git clone 'https://github.com/sIUzyy/prics-epod-appt.git'
-  cd prics-epod-appt
+  git clone 'https://github.com/sIUzyy/prics-fn-sql.git'
+  cd prics-fn-sql
   npm install
   npm run dev
 ```
